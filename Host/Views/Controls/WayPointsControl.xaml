@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="Host.Views.Controls.WayPointsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Host.Views.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel Grid.RowSpan="3" Grid.Column="1" VerticalAlignment="Center">
+        <ListBox Background="Gray" BorderThickness="1" Width="300" ItemsSource="{Binding WayPoints}" SelectedItem="{Binding SelectedWayPoint}" BorderBrush="Black">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel DataContext="{Binding Location}">
+                        <TextBlock FontSize="44" Text="{Binding Path=Name}" Foreground="#ffd505" FontFamily="wow" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</UserControl>

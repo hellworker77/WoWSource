@@ -1,0 +1,161 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject></StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Avatars\common.png" />
+    <None Remove="Images\Avatars\epic.png" />
+    <None Remove="Images\Avatars\legendary.png" />
+    <None Remove="Images\Avatars\rare.png" />
+    <None Remove="Images\Avatars\uncommon.png" />
+    <None Remove="Images\Background\elwynforest.jpg" />
+    <None Remove="Images\Background\menu.jpg" />
+    <None Remove="Images\Background\westfall.jpg" />
+    <None Remove="Images\Frames\backpack.png" />
+    <None Remove="Images\Frames\bag.png" />
+    <None Remove="Images\Frames\barframe.png" />
+    <None Remove="Images\Frames\barframe_r.png" />
+    <None Remove="Images\Frames\frame.png" />
+    <None Remove="Images\Frames\life.png" />
+    <None Remove="Images\Frames\lifebg.png" />
+    <None Remove="Images\Frames\mana.png" />
+    <None Remove="Images\Frames\sword.png" />
+    <None Remove="Images\Items\amulet.png" />
+    <None Remove="Images\Items\belt.png" />
+    <None Remove="Images\Items\boots.png" />
+    <None Remove="Images\Items\bracers.png" />
+    <None Remove="Images\Items\chestplate.png" />
+    <None Remove="Images\Items\gloves.png" />
+    <None Remove="Images\Items\helm.png" />
+    <None Remove="Images\Items\pants.png" />
+    <None Remove="Images\Items\ring_01.png" />
+    <None Remove="Images\Items\ring_02.png" />
+    <None Remove="Images\Items\shield.png" />
+    <None Remove="Images\Items\shoulder.png" />
+    <None Remove="Images\Items\sword.png" />
+    <None Remove="Images\LairEnemies\ogre.jpg" />
+    <None Remove="Images\LairEnemies\ogrehead.png" />
+    <None Remove="Images\LairEnemies\ork.jpg" />
+    <None Remove="Images\LairEnemies\orkhead.png" />
+    <None Remove="Images\LairEnemies\werewolf.jpg" />
+    <None Remove="Images\LairEnemies\werewolfhead.png" />
+    <None Remove="Images\LairEnemies\wolf.jpg" />
+    <None Remove="Images\LairEnemies\wolfhead.png" />
+    <None Remove="Images\Misc\button.png" />
+    <None Remove="Images\Misc\text_input.png" />
+    <None Remove="Images\Sets\start_set.png" />
+    <None Remove="Images\Skins\common.jpg" />
+    <None Remove="Images\Skins\commonhead.png" />
+    <None Remove="Images\Skins\epic.jpg" />
+    <None Remove="Images\Skins\epichead.png" />
+    <None Remove="Images\Skins\legendary.jpg" />
+    <None Remove="Images\Skins\legendaryhead.png" />
+    <None Remove="Images\Skins\rare.jpg" />
+    <None Remove="Images\Skins\rarehead.png" />
+    <None Remove="Images\Skins\uncommon.jpg" />
+    <None Remove="Images\Skins\uncommonhead.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Hellworker.Wow.Core\Hellworker.Wow.Core.csproj" />
+    <ProjectReference Include="..\Hellworker.Wow.DataAccess\Hellworker.Wow.DataAccess.csproj" />
+    <ProjectReference Include="..\Host\Host.csproj" />
+    <ProjectReference Include="..\Mapping\Mapping.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Avatars\common.png" />
+    <Resource Include="Images\Avatars\epic.png" />
+    <Resource Include="Images\Avatars\legendary.png" />
+    <Resource Include="Images\Avatars\rare.png" />
+    <Resource Include="Images\Avatars\uncommon.png" />
+    <Resource Include="Images\Background\elwynforest.jpg" />
+    <Resource Include="Images\Background\menu.jpg" />
+    <Resource Include="Images\Background\westfall.jpg" />
+    <Resource Include="Images\Frames\backpack.png" />
+    <Resource Include="Images\Frames\bag.png" />
+    <Resource Include="Images\Frames\barframe.png" />
+    <Resource Include="Images\Frames\barframe_r.png" />
+    <Resource Include="Images\Frames\frame.png" />
+    <Resource Include="Images\Frames\life.png" />
+    <Resource Include="Images\Frames\lifebg.png" />
+    <Resource Include="Images\Frames\mana.png" />
+    <Resource Include="Images\Frames\sword.png" />
+    <Resource Include="Images\Items\amulet.png" />
+    <Resource Include="Images\Items\belt.png" />
+    <Resource Include="Images\Items\boots.png" />
+    <Resource Include="Images\Items\bracers.png" />
+    <Resource Include="Images\Items\chestplate.png" />
+    <Resource Include="Images\Items\gloves.png" />
+    <Resource Include="Images\Items\helm.png" />
+    <Resource Include="Images\Items\pants.png" />
+    <Resource Include="Images\Items\ring_01.png" />
+    <Resource Include="Images\Items\ring_02.png" />
+    <Resource Include="Images\Items\shield.png" />
+    <Resource Include="Images\Items\shoulder.png" />
+    <Resource Include="Images\Items\sword.png" />
+    <Resource Include="Images\LairEnemies\ogre.jpg" />
+    <Resource Include="Images\LairEnemies\ogrehead.png" />
+    <Resource Include="Images\LairEnemies\ork.jpg" />
+    <Resource Include="Images\LairEnemies\orkhead.png" />
+    <Resource Include="Images\LairEnemies\werewolf.jpg" />
+    <Resource Include="Images\LairEnemies\werewolfhead.png" />
+    <Resource Include="Images\LairEnemies\wolf.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\LairEnemies\wolfhead.png" />
+    <Resource Include="Images\Misc\button.png" />
+    <Resource Include="Images\Misc\text_input.png" />
+    <Resource Include="Images\Sets\start_set.png" />
+    <Resource Include="Images\Skins\common.jpg" />
+    <Resource Include="Images\Skins\commonhead.png" />
+    <Resource Include="Images\Skins\epic.jpg" />
+    <Resource Include="Images\Skins\epichead.png" />
+    <Resource Include="Images\Skins\legendary.jpg" />
+    <Resource Include="Images\Skins\legendaryhead.png" />
+    <Resource Include="Images\Skins\rare.jpg" />
+    <Resource Include="Images\Skins\rarehead.png" />
+    <Resource Include="Images\Skins\uncommon.jpg" />
+    <Resource Include="Images\Skins\uncommonhead.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

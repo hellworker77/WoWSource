@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Host.Views.Controls.GameplayControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Host.Views.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Canvas Grid.ColumnSpan="2" x:Name="Gameplay">
+        <Canvas.Background>
+            <ImageBrush  ImageSource="{Binding Path=SelectedWayPoint.Location.Background}"/>
+        </Canvas.Background>
+        <Grid Canvas.Left="10" Canvas.Top="24">
+            <Image  Source="/Images/Frames/life.png" Width="{Binding SelectedPlayer.BarWidth}" Height="20" HorizontalAlignment="Left" Stretch="Fill" Margin="164,81,0,71" />
+            <Ellipse Margin="5,10,295,10">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding SelectedPlayer.ImageHead}"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Image Width="450" Source="/Images/Frames/barframe.png"/>
+            <TextBlock Text="{Binding SelectedPlayer.HealthString}"  FontFamily="wow" FontSize="17" FontWeight="Bold" Background="Transparent" Foreground="White" VerticalAlignment="Top" TextAlignment="Center" Margin="164,81,5,0" Height="22"/>
+            <TextBlock Text="{Binding SelectedPlayer.Level}"  FontFamily="wow" FontSize="22" FontWeight="Bold" Foreground="White" Background="Transparent" TextAlignment="Center" Margin="10,125,400,10"/>
+        </Grid>
+
+        <Grid Canvas.Right="10" Canvas.Top="24" Background="Transparent">
+            <Image  Source="/Images/Frames/life.png" Height="20" Width="{Binding SelectedLairEnemy.BarWidth}" HorizontalAlignment="Right" Stretch="Fill" VerticalAlignment="Top" Margin="0,76,163,0" />
+            <Ellipse Margin="295,10,10,10">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding Path=SelectedLairEnemy.ImageHead}"/>
+                </Ellipse.Fill>
+            </Ellipse>
+            <Image Width="450"  Source="/Images/Frames/barframe_r.png" />
+            <TextBlock Text="{Binding SelectedLairEnemy.HealthString}" FontFamily="wow" FontSize="17" FontWeight="Bold" Foreground="White" Background="Transparent" VerticalAlignment="Top" TextAlignment="Center" Height="21" Canvas.Left="42" Canvas.Top="37" Width="281" HorizontalAlignment="Left" Margin="5,76,0,0" />
+            <TextBlock Text="{Binding SelectedLairEnemy.Level}"  FontFamily="wow" FontSize="22" FontWeight="Bold" Foreground="White" Background="Transparent" TextAlignment="Center" Margin="400,124,10,11"/>
+        </Grid>
+
+
+        <Image Width="240" Height="320" Source="{Binding Path=SelectedPlayer.Image}" Canvas.Left="80" Canvas.Top="450" />
+
+        <Image Width="320" Height="320" Source="{Binding Path=SelectedLairEnemy.Image}" Canvas.Right="80" Canvas.Top="450"/>
+
+        <Rectangle Width="800" Height="40" Fill="Gray" Canvas.Left="20" Canvas.Bottom="0"/>
+        <Button  Width="40" Height="40" Canvas.Left="20" Canvas.Bottom="0" Command="{Binding SendRequestCommand}" CommandParameter="AttackCommand">
+            <Button.Background>
+                <ImageBrush ImageSource="/Images/Frames/sword.png"/>
+            </Button.Background>
+        </Button>
+
+    </Canvas>
+</UserControl>
